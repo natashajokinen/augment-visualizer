@@ -1,0 +1,23 @@
+{
+  "augement name": {
+    "properties": {
+      "property1": "value",
+      "property2": "value"
+    },
+    "category": "soul"
+  },
+  "Dolz Soul I": {
+    "category": "soul",
+    "properties": {
+      "PP": "+3",
+      "Potency Base Increase": "+2.0%"
+    }
+  },
+  "Alts Soul I": {
+    "category": "soul",
+    "properties": {
+      "HP": "+5",
+      "PP": "+2"
+    }
+  }
+}

@@ -1,23 +1,16 @@
-import logo from './logo.svg';
+import AugmentClasslist from './augmentChecklist';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           See what augments do to your equipment in PSO2:NGS
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* Components that go here can be functional components from another file */}
       </header>
+      <AugmentClasslist/>
     </div>
   );
 }
