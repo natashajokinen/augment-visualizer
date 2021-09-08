@@ -1,6 +1,9 @@
+
+import Checkbox from '@material-ui/core/Checkbox';
 import Collapse from '@material-ui/core/Collapse';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
@@ -16,6 +19,20 @@ function AugmentChecklist() {
   const [open, setOpen] = React.useState(true);
   const handleClick = () => {
     setOpen(!open);
+  };
+
+  const [checked, setChecked] = React.useState([]);
+  const handleCheckboxToggle = (augmentName) => () => {
+    const currentIndex = checked.indexOf(augmentName);
+    const newChecked = [...checked];
+
+    if (currentIndex === -1) {
+      newChecked.push(augmentName);
+    } else {
+      newChecked.splice(currentIndex, 1);
+    }
+
+    setChecked(newChecked);
   };
 
   const propertyAugments = orderAugmentsByProperty(augmentData);
@@ -41,6 +58,14 @@ function AugmentChecklist() {
           key={`item-${property}-${augmentName}`}
           className={classes.nested}
         >
+          <ListItemIcon onClick={handleCheckboxToggle(augmentName)}>
+            <Checkbox
+              checked={checked.indexOf(augmentName) !== -1}
+              tabIndex={-1}
+              disableRipple
+              inputProps={{'aria-labelledby': `checkbox-list-label-${augmentName}`}}
+            />
+          </ListItemIcon>
           <ListItemText>{augmentName}</ListItemText>
         </ListItem>
       );
