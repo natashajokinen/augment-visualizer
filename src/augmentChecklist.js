@@ -57,6 +57,7 @@ function AugmentChecklist() {
           button
           key={`item-${property}-${augmentName}`}
           className={classes.nested}
+          onClick={handleCheckboxToggle(augmentName)}
         >
           <ListItemIcon onClick={handleCheckboxToggle(augmentName)}>
             <Checkbox
