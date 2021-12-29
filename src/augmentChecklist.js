@@ -7,6 +7,9 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {updateChecklist} from './app/store';
+
 const augmentData = require('./augmentData.json');
 
 const useStyles = makeStyles((theme) => ({
@@ -15,25 +18,17 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 function AugmentChecklist() {
+  const dispatch = useDispatch();
   const classes = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleClick = () => {
     setOpen(!open);
   };
 
-  const [checked, setChecked] = React.useState([]);
-  const handleCheckboxToggle = (augmentName) => () => {
-    const currentIndex = checked.indexOf(augmentName);
-    const newChecked = [...checked];
-
-    if (currentIndex === -1) {
-      newChecked.push(augmentName);
-    } else {
-      newChecked.splice(currentIndex, 1);
-    }
-
-    setChecked(newChecked);
-  };
+  const checked = useSelector((state) => state.checklist.checked);
+  const handleCheckboxToggle = (augmentName) => {
+    dispatch(updateChecklist(augmentName));
+  }
 
   const propertyAugments = orderAugmentsByProperty(augmentData);
   let giantList = [];
@@ -57,9 +52,9 @@ function AugmentChecklist() {
           button
           key={`item-${property}-${augmentName}`}
           className={classes.nested}
-          onClick={handleCheckboxToggle(augmentName)}
+          onClick={()=>handleCheckboxToggle(augmentName)}
         >
-          <ListItemIcon onClick={handleCheckboxToggle(augmentName)}>
+          <ListItemIcon onClick={()=>handleCheckboxToggle(augmentName)}>
             <Checkbox
               checked={checked.indexOf(augmentName) !== -1}
               tabIndex={-1}
