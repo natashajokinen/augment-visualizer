@@ -1,4 +1,5 @@
 import AugmentClasslist from './augmentChecklist';
+import SelectedAugments from './selectedAugments';
 import { CacheProvider } from "@emotion/react";
 import createCache from "@emotion/cache";
 import './App.css';
@@ -19,6 +20,7 @@ function App() {
           {/* Components that go here can be functional components from another file */}
         </header>
         <AugmentClasslist/>
+        <SelectedAugments/>
       </div>
     </CacheProvider>
   );
