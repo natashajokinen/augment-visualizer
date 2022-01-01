@@ -59,7 +59,7 @@ function AugmentChecklist() {
           className={classes.nested}
           onClick={()=>handleCheckboxToggle(augmentName)}
         >
-          <ListItemIcon onClick={()=>handleCheckboxToggle(augmentName)}>
+          <ListItemIcon>
             <Checkbox
               checked={checked.indexOf(augmentName) !== -1}
               tabIndex={-1}

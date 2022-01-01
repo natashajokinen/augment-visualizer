@@ -16,7 +16,7 @@ const {makeStyles} = createMakeAndWithStyles({useTheme});
 const useStyles = makeStyles()((theme) => ({
   root: {
     width: '350px',
-    float: 'left',
+    float: 'right',
   },
   nested: {
     paddingLeft: theme.spacing(4),
@@ -59,7 +59,7 @@ function SelectedAugments() {
           className={classes.nested}
           onClick={()=>handleCheckboxToggle(augmentName)}
         >
-          <ListItemIcon onClick={()=>handleCheckboxToggle(augmentName)}>
+          <ListItemIcon>
             <Checkbox
               checked={checked.indexOf(augmentName) !== -1}
               tabIndex={-1}
