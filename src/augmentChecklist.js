@@ -1,5 +1,7 @@
 import Checkbox from '@mui/material/Checkbox';
 import Collapse from '@mui/material/Collapse';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -46,7 +48,8 @@ function AugmentChecklist() {
       key={`item-${property}`}
     >
       <ListItemText>{property}</ListItemText>
-    </ListItem>
+      {open ? <ExpandLess/> : <ExpandMore/>}
+    </ListItem>,
     );
 
     // Build up the augment list for that property
