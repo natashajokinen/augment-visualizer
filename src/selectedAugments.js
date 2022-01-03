@@ -7,8 +7,7 @@ import ListItemText from '@mui/material/ListItemText';
 import { useTheme } from "@mui/material/styles";
 import { createMakeAndWithStyles } from "tss-react/compat";
 import React from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {updateChecklist} from './app/store';
+import {useSelector} from 'react-redux';
 
 const augmentData = require('./augmentData.json');
 
@@ -23,7 +22,6 @@ const useStyles = makeStyles()((theme) => ({
   },
 }));
 function SelectedAugments() {
-  const dispatch = useDispatch();
   const {classes} = useStyles();
   const [open, setOpen] = React.useState(true);
   const handleClick = () => {
@@ -31,50 +29,38 @@ function SelectedAugments() {
   };
 
   const checked = useSelector((state) => state.checklist.checked);
-  const handleCheckboxToggle = (augmentName) => {
-    dispatch(updateChecklist(augmentName));
-  }
 
-  const propertyAugments = orderAugmentsByProperty(augmentData);
+  const {categories, warning} = orderCheckedAugmentsByCategory(checked, augmentData);
   let giantList = [];
-  Object.keys(propertyAugments).forEach((property) => {
-    // Add the property first
+  Object.keys(categories).forEach((category) => {
+    // Add the category first
     giantList.push(
     <ListItem 
       button
       onClick={handleClick}
-      key={`item-${property}`}
+      key={`item-${category}`}
     >
-      <ListItemText>{property}</ListItemText>
+      <ListItemText>{category}</ListItemText>
     </ListItem>
     );
 
-    // Build up the augment list for that property
+    // Build up the augment list for that category
     let augmentList = [];
-    propertyAugments[property].forEach((augmentName) => {
+    categories[category].forEach((augmentName) => {
       augmentList.push(
         <ListItem
           button
-          key={`item-${property}-${augmentName}`}
+          key={`item-${category}-${augmentName}`}
           className={classes.nested}
-          onClick={()=>handleCheckboxToggle(augmentName)}
         >
-          <ListItemIcon>
-            <Checkbox
-              checked={checked.indexOf(augmentName) !== -1}
-              tabIndex={-1}
-              disableRipple
-              inputProps={{'aria-labelledby': `checkbox-list-label-${augmentName}`}}
-            />
-          </ListItemIcon>
           <ListItemText>{augmentName}</ListItemText>
         </ListItem>
       );
     });
 
-    // Add the augments that have the property
+    // Add the augments that have the category
     giantList.push(
-      <Collapse in={open} unmountOnExit key={`collapse-${property}`}>
+      <Collapse in={open} unmountOnExit key={`collapse-${category}`}>
         <List>
           {augmentList}
         </List>
@@ -85,17 +71,19 @@ function SelectedAugments() {
   );
 }
 
-function orderAugmentsByProperty(augmentData) {
-  let ret = {};
-  Object.keys(augmentData).forEach((augmentName) => {
-    let augmentProperties = augmentData[augmentName].properties;
-    Object.keys(augmentProperties).forEach((property) => {
-      if (!ret[property]) {
-        ret[property] = [augmentName];
-      } else {
-        ret[property].push(augmentName);
-      }
-    });
+function orderCheckedAugmentsByCategory(checkedAugments, augmentData) {
+  let ret = {
+    categories: {},
+    warning: false,
+  };
+  checkedAugments.forEach((augmentName) => {
+    let augmentCategory = augmentData[augmentName].category;
+    if (!ret.categories[augmentCategory]) {
+      ret.categories[augmentCategory] = [augmentName];
+    } else {
+      ret.categories[augmentCategory].push(augmentName);
+      ret.warning = true;
+    }
   });
   return ret;
 }
