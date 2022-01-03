@@ -66,16 +66,31 @@ function SelectedAugments() {
         </List>
       </Collapse>);
   });
+
+  let totalsList = [];
+  const totals = calculatePropertyTotals(checked, augmentData);
+  Object.keys(totals).forEach((property) => {
+    totalsList.push(
+      <ListItem
+        key={`item-total-${property}`}
+      >
+        {property} {formatPropertyTotal(totals[property])}
+      </ListItem>
+    );
+  });
+
   return (
     <div className={classes.root}>
       <List>{giantList}</List>
       {warning ? <Alert variant='filled' severity='warning'>Warning: There are two or more augment selections from the same category</Alert>: ''}
+      TOTALS
+      <List>{totalsList}</List>
     </div>
   );
 }
 
 function orderCheckedAugmentsByCategory(checkedAugments, augmentData) {
-  let ret = {
+  const ret = {
     categories: {},
     warning: false,
   };
@@ -89,6 +104,44 @@ function orderCheckedAugmentsByCategory(checkedAugments, augmentData) {
     }
   });
   return ret;
+}
+
+function calculatePropertyTotals(checkedAugments, augmentData) {
+  const ret = {};
+  checkedAugments.forEach((augmentName) => {
+    let augmentProperties = augmentData[augmentName].properties;
+    Object.keys(augmentProperties).forEach((property) => {
+      const currentAugmentProps = augmentProperties[property];
+      if (!ret[property] && currentAugmentProps.isPercent) {
+        ret[property] = {
+          isPercent: true,
+          val: 1,
+        };
+      } else if (!ret[property]) {
+        ret[property] = 0;
+      }
+
+      if (currentAugmentProps.isPercent && currentAugmentProps.operand === '+') {
+        ret[property].val *= (1 + currentAugmentProps.value/100);
+      } else if (currentAugmentProps.isPercent && currentAugmentProps.operand === '-') {
+        ret[property].val /= (1 + currentAugmentProps.value/100);
+      } else if (currentAugmentProps.operand === '+') {
+        ret[property] += currentAugmentProps.value;
+      } else if (currentAugmentProps.operand === '-') {
+        ret[property] -= currentAugmentProps.value;
+      }
+    });
+  });
+  return ret;
+}
+
+function formatPropertyTotal(aggregatedProperty) {
+  if (aggregatedProperty.isPercent) {
+    const value = ((aggregatedProperty.val - 1) * 100).toFixed(2);
+    return value >= 0 ? `+${value}%` : `${value}%`;
+  }
+
+  return aggregatedProperty >= 0 ? `+${aggregatedProperty}` : `${aggregatedProperty}`;
 }
 
 export default SelectedAugments;

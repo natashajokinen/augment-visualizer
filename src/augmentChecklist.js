@@ -23,6 +23,9 @@ const useStyles = makeStyles()((theme) => ({
   nested: {
     paddingLeft: theme.spacing(4),
   },
+  propertyNested: {
+    paddingLeft: theme.spacing(13),
+  }
 }));
 function AugmentChecklist() {
   const dispatch = useDispatch();
@@ -73,6 +76,25 @@ function AugmentChecklist() {
           <ListItemText>{augmentName}</ListItemText>
         </ListItem>
       );
+
+      let augmentPropertiesList = [];
+      const propertiesToShow = augmentData[augmentName].properties;
+      Object.keys(propertiesToShow).forEach((augmentProperty) => {
+        const formattedPropertyValue = `${propertiesToShow[augmentProperty].operand}${propertiesToShow[augmentProperty].value}${propertiesToShow[augmentProperty].isPercent ? '%' : ''}`
+        augmentPropertiesList.push(
+          <ListItem
+            key={`item-${property}-${augmentName}-${augmentProperty}`}
+            className={classes.propertyNested}
+          >
+            <ListItemText>{augmentProperty} {formattedPropertyValue}</ListItemText>
+          </ListItem>
+        );
+      });
+      augmentList.push(
+        <List>
+          {augmentPropertiesList}
+        </List>
+      );
     });
 
     // Add the augments that have the property
@@ -89,7 +111,7 @@ function AugmentChecklist() {
 }
 
 function orderAugmentsByProperty(augmentData) {
-  let ret = {};
+  const ret = {};
   Object.keys(augmentData).forEach((augmentName) => {
     let augmentProperties = augmentData[augmentName].properties;
     Object.keys(augmentProperties).forEach((property) => {

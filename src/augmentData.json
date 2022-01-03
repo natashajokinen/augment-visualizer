@@ -1,23 +1,52 @@
 {
   "augement name": {
     "properties": {
-      "property1": "value",
-      "property2": "value"
+      "property1": {
+        "operand": "-",
+        "value": 0
+      },
+      "property2": {
+        "operand": "+",
+        "value": 0
+      },
+      "Potency Base Increase": {
+        "operand": "-",
+        "value": 2,
+        "isPercent": true
+      }
     },
     "category": "addi"
   },
   "Dolz Soul I": {
     "category": "soul",
     "properties": {
-      "PP": "+3",
-      "Potency Base Increase": "+2.0%"
+      "PP": {
+        "operand":"+",
+        "value":3
+      },
+      "Potency Base Increase": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
     }
   },
   "Alts Soul I": {
     "category": "soul",
     "properties": {
-      "HP": "+5",
-      "PP": "+2"
+      "HP": {
+        "operand": "+",
+        "value": 5
+      },
+      "PP": {
+        "operand": "+",
+        "value": 2
+      },
+      "Potency Base Increase": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
     }
   }
 }
