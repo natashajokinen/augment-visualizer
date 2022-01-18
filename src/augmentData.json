@@ -1,28 +1,465 @@
 {
-  "augement name": {
+  "Stamina I": {
+    "category": "Stamina",
     "properties": {
-      "property1": {
-        "operand": "-",
-        "value": 0
-      },
-      "property2": {
+      "HP": {
         "operand": "+",
-        "value": 0
-      },
-      "Potency Base Increase": {
-        "operand": "-",
+        "value": 5
+      }
+    }
+  },
+  "Stamina II": {
+    "category": "Stamina",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 10
+      }
+    }
+  },
+  "Stamina III": {
+    "category": "Stamina",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      }
+    }
+  },
+  "Spirit I": {
+    "category": "Spirit",
+    "properties": {
+      "PP": {
+        "operand": "+",
+        "value": 3
+      }
+    }
+  },
+  "Spirit II": {
+    "category": "Spirit",
+    "properties": {
+      "PP": {
+        "operand": "+",
+        "value": 4
+      }
+    }
+  },
+  "Spirit III": {
+    "category": "Spirit",
+    "properties": {
+      "PP": {
+        "operand": "+",
+        "value": 5
+      }
+    }
+  },
+  "Might I": {
+    "category": "Might",
+    "properties": {
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Might II": {
+    "category": "Might",
+    "properties": {
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Might III": {
+    "category": "Might",
+    "properties": {
+      "Melee Weapon Potency": {
+        "operand": "+",
         "value": 2,
         "isPercent": true
       }
-    },
-    "category": "addi"
+    }
+  },
+  "Precision I": {
+    "category": "Precision",
+    "properties": {
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Precision II": {
+    "category": "Precision",
+    "properties": {
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Precision III": {
+    "category": "Precision",
+    "properties": {
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Technique I": {
+    "category": "Technique",
+    "properties": {
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Technique II": {
+    "category": "Technique",
+    "properties": {
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Technique III": {
+    "category": "Technique",
+    "properties": {
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Deftness I": {
+    "category": "Deftness",
+    "properties": {
+      "Potency Floor Increase": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Deftness II": {
+    "category": "Deftness",
+    "properties": {
+      "Potency Floor Increase": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Deftness III": {
+    "category": "Deftness",
+    "properties": {
+      "Potency Floor Increase": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Guard I": {
+    "category": "Guard",
+    "properties": {
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Guard II": {
+    "category": "Guard",
+    "properties": {
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Guard III": {
+    "category": "Guard",
+    "properties": {
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Mastery I": {
+    "category": "Mastery",
+    "properties": {
+      "Potency": {
+        "operand": "+",
+        "value": 0.5,
+        "isPercent": true
+      },
+      "Potency Floor Increase": {
+        "operand": "+",
+        "value": 0.5,
+        "isPercent": true
+      },
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 0.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Mastery II": {
+    "category": "Mastery",
+    "properties": {
+      "Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      },
+      "Potency Floor Increase": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      },
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Mastery III": {
+    "category": "Mastery",
+    "properties": {
+      "Potency": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      },
+      "Potency Floor Increase": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      },
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Melra Dualble I": {
+    "category": "Dualble",
+    "properties": {
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 0.75,
+        "isPercent": true
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 0.75,
+        "isPercent": true
+      }
+    }
+  },
+  "Melra Dualble II": {
+    "category": "Dualble",
+    "properties": {
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 1.25,
+        "isPercent": true
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 1.25,
+        "isPercent": true
+      }
+    }
+  },
+  "Melra Dualble III": {
+    "category": "Dualble",
+    "properties": {
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 1.75,
+        "isPercent": true
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 1.75,
+        "isPercent": true
+      }
+    }
+  },
+  "Meltech Dualble I": {
+    "category": "Dualble",
+    "properties": {
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 0.75,
+        "isPercent": true
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 0.75,
+        "isPercent": true
+      }
+    }
+  },
+  "Meltech Dualble II": {
+    "category": "Dualble",
+    "properties": {
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 1.25,
+        "isPercent": true
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 1.25,
+        "isPercent": true
+      }
+    }
+  },
+  "Meltech Dualble III": {
+    "category": "Dualble",
+    "properties": {
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 1.75,
+        "isPercent": true
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 1.75,
+        "isPercent": true
+      }
+    }
+  },
+  "Ratech Dualble I": {
+    "category": "Dualble",
+    "properties": {
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 0.75,
+        "isPercent": true
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 0.75,
+        "isPercent": true
+      }
+    }
+  },
+  "Ratech Dualble II": {
+    "category": "Dualble",
+    "properties": {
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 1.25,
+        "isPercent": true
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 1.25,
+        "isPercent": true
+      }
+    }
+  },
+  "Ratech Dualble III": {
+    "category": "Dualble",
+    "properties": {
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 1.75,
+        "isPercent": true
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 1.75,
+        "isPercent": true
+      }
+    }
+  },
+  "Alts Soul I": {
+    "category": "Soul",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 5
+      },
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Alts Soul II": {
+    "category": "Soul",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 10
+      },
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Alts Soul III": {
+    "category": "Soul",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      },
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
   },
   "Dolz Soul I": {
-    "category": "soul",
+    "category": "Soul",
     "properties": {
       "PP": {
         "operand":"+",
-        "value":3
+        "value": 5
+      },
+      "Potency Base Increase": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Dolz Soul II": {
+    "category": "Soul",
+    "properties": {
+      "PP": {
+        "operand":"+",
+        "value": 5
       },
       "Potency Base Increase": {
         "operand": "+",
@@ -31,8 +468,352 @@
       }
     }
   },
-  "Alts Soul I": {
-    "category": "soul",
+  "Dolz Soul III": {
+    "category": "Soul",
+    "properties": {
+      "PP": {
+        "operand":"+",
+        "value": 5
+      },
+      "Potency Base Increase": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Forms Soul I": {
+    "category": "Soul",
+    "properties": {
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Forms Soul II": {
+    "category": "Soul",
+    "properties": {
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      },
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Forms Soul III": {
+    "category": "Soul",
+    "properties": {
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      },
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Forms Machini Soul I": {
+    "category": "Soul",
+    "properties": {
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Forms Machini Soul II": {
+    "category": "Soul",
+    "properties": {
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      },
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Forms Machini Soul III": {
+    "category": "Soul",
+    "properties": {
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      },
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Forms Sand Soul I": {
+    "category": "Soul",
+    "properties": {
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Forms Sand Soul II": {
+    "category": "Soul",
+    "properties": {
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      },
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Forms Sand Soul III": {
+    "category": "Soul",
+    "properties": {
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      },
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Daityl Soul I": {
+    "category": "Soul",
+    "properties": {
+      "PP": {
+        "operand": "+",
+        "value": 5
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Daityl Soul II": {
+    "category": "Soul",
+    "properties": {
+      "PP": {
+        "operand": "+",
+        "value": 5
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Pettas Soul I": {
+    "category": "Soul",
+    "properties": {
+      "PP": {
+        "operand": "+",
+        "value": 5
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Pettas Soul II": {
+    "category": "Soul",
+    "properties": {
+      "PP": {
+        "operand": "+",
+        "value": 5
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Nex Soul I": {
+    "category": "Soul",
+    "properties": {
+      "PP": {
+        "operand": "+",
+        "value": 5
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Nex Soul II": {
+    "category": "Soul",
+    "properties": {
+      "PP": {
+        "operand": "+",
+        "value": 5
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Ragras Soul I": {
+    "category": "Soul",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Ragras Soul II": {
+    "category": "Soul",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Ragras Soul III": {
+    "category": "Soul",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Dust Soul I": {
+    "category": "Soul",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Dust Soul II": {
+    "category": "Soul",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Dust Soul III": {
+    "category": "Soul",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Renus Soul I": {
+    "category": "Soul",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Renus Soul II": {
+    "category": "Soul",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Renus Soul III": {
+    "category": "Soul",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Ael Note A": {
+    "category": "Note",
     "properties": {
       "HP": {
         "operand": "+",
@@ -40,11 +821,747 @@
       },
       "PP": {
         "operand": "+",
-        "value": 2
+        "value": 3
+      }
+    }
+  },
+  "Ael Note B": {
+    "category": "Note",
+    "properties": {
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
       },
-      "Potency Base Increase": {
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Ael Note C": {
+    "category": "Note",
+    "properties": {
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Ael Note D": {
+    "category": "Note",
+    "properties": {
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Ret Note A": {
+    "category": "Note",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 10
+      }
+    }
+  },
+  "Ret Note B": {
+    "category": "Note",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 5
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 0.75,
+        "isPercent": true
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 0.75,
+        "isPercent": true
+      }
+    }
+  },
+  "Ret Note C": {
+    "category": "Note",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 5
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 0.75,
+        "isPercent": true
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 0.75,
+        "isPercent": true
+      }
+    }
+  },
+  "Ret Note D": {
+    "category": "Note",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 5
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 0.75,
+        "isPercent": true
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 0.75,
+        "isPercent": true
+      }
+    }
+  },
+  "Magnus Note": {
+    "category": "Note",
+    "properties": {
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Lab Note": {
+    "category": "Note",
+    "properties": {
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Resola Note": {
+    "category": "Note",
+    "properties": {
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Alno Note": {
+    "category": "Note",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 10
+      },
+      "PP": {
+        "operand": "+",
+        "value": 3
+      },
+      "Potency Floor Increase": {
         "operand": "+",
         "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Maqea Note": {
+    "category": "Note",
+    "properties": {
+      "Potency": {
+        "operand": "+",
+        "value": 1.25,
+        "isPercent": true
+      }
+    }
+  },
+  "Ael Domina": {
+    "category": "Domina",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 5
+      },
+      "PP": {
+        "operand": "+",
+        "value": 3
+      },
+      "Potency": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Ret Domina": {
+    "category": "Domina",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      },
+      "Potency": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Alts Secreta I": {
+    "category": "Secreta",
+    "properties": {
+      "HP": {
+        "operand": "-",
+        "value": 10
+      },
+      "Potency": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      },
+      "Potency Floor Increase": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      },
+      "Damage Resistance": {
+        "operand": "-",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Alts Secreta II": {
+    "category": "Secreta",
+    "properties": {
+      "HP": {
+        "operand": "-",
+        "value": 10
+      },
+      "Potency": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      },
+      "Potency Floor Increase": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      },
+      "Damage Resistance": {
+        "operand": "-",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Alts Secreta III": {
+    "category": "Secreta",
+    "properties": {
+      "HP": {
+        "operand": "-",
+        "value": 10
+      },
+      "Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      },
+      "Potency Floor Increase": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      },
+      "Damage Resistance": {
+        "operand": "-",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Dread Keeper I": {
+    "category": "Dread",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 10
+      },
+      "PP": {
+        "operand": "+",
+        "value": 3
+      },
+      "Potency Floor Increase": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      },
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 1,
+        "isPercent": true
+      }
+    }
+  },
+  "Dread Keeper II": {
+    "category": "Dread",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      },
+      "PP": {
+        "operand": "+",
+        "value": 4
+      },
+      "Potency Floor Increase": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      },
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Dread Keeper III": {
+    "category": "Dread",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 30
+      },
+      "PP": {
+        "operand": "+",
+        "value": 7
+      },
+      "Potency Floor Increase": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      },
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Gigas Might I": {
+    "category": "Gigas",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 5
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Gigas Might II": {
+    "category": "Gigas",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 10
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Gigas Might III": {
+    "category": "Gigas",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Gigas Precision I": {
+    "category": "Gigas",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 5
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Gigas Precision II": {
+    "category": "Gigas",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 10
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Gigas Precision III": {
+    "category": "Gigas",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Gigas Technique I": {
+    "category": "Gigas",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 5
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 1.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Gigas Technique II": {
+    "category": "Gigas",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 10
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 2,
+        "isPercent": true
+      }
+    }
+  },
+  "Gigas Technique III": {
+    "category": "Gigas",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 15
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Deftmel": {
+    "category": "Addi",
+    "properties": {
+      "Potency Floor Increase": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Deftra": {
+    "category": "Addi",
+    "properties": {
+      "Potency Floor Increase": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Defttech": {
+    "category": "Addi",
+    "properties": {
+      "Potency Floor Increase": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Guamel": {
+    "category": "Addi",
+    "properties": {
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Guara": {
+    "category": "Addi",
+    "properties": {
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Guatech": {
+    "category": "Addi",
+    "properties": {
+      "Damage Resistance": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Spimel": {
+    "category": "Addi",
+    "properties": {
+      "PP": {
+        "operand": "+",
+        "value": 6
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Spira": {
+    "category": "Addi",
+    "properties": {
+      "PP": {
+        "operand": "+",
+        "value": 6
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Spitech": {
+    "category": "Addi",
+    "properties": {
+      "PP": {
+        "operand": "+",
+        "value": 6
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Stamel": {
+    "category": "Addi",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 20
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Stara": {
+    "category": "Addi",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 20
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Statech": {
+    "category": "Addi",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 20
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Staspimel": {
+    "category": "Addi",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 10
+      },
+      "PP": {
+        "operand": "+",
+        "value": 3
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Staspira": {
+    "category": "Addi",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 10
+      },
+      "PP": {
+        "operand": "+",
+        "value": 3
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Staspitech": {
+    "category": "Addi",
+    "properties": {
+      "HP": {
+        "operand": "+",
+        "value": 10
+      },
+      "PP": {
+        "operand": "+",
+        "value": 3
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Wardmel": {
+    "category": "Addi",
+    "properties": {
+      "All Down Resistance": {
+        "operand": "+",
+        "value": 20,
+        "isPercent": true
+      },
+      "Melee Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Wardra": {
+    "category": "Addi",
+    "properties": {
+      "All Down Resistance": {
+        "operand": "+",
+        "value": 20,
+        "isPercent": true
+      },
+      "Ranged Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
+        "isPercent": true
+      }
+    }
+  },
+  "Addi Wardtech": {
+    "category": "Addi",
+    "properties": {
+      "All Down Resistance": {
+        "operand": "+",
+        "value": 20,
+        "isPercent": true
+      },
+      "Technique Weapon Potency": {
+        "operand": "+",
+        "value": 2.5,
         "isPercent": true
       }
     }
