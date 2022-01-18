@@ -15,6 +15,8 @@ const useStyles = makeStyles()((theme) => ({
   root: {
     width: '350px',
     float: 'left',
+    left: '350px',
+    position: 'fixed',
     paddingLeft: '40px',
   },
   nested: {
